@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import heroImg from "../assets/hero.jpg";
 
 const Home = () => {
   return (
@@ -34,11 +33,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <img
-        src={heroImg}
-        alt=""
-        className="w-5/6 mx-auto mb-12 -mt-20 rounded-lg shadow-md lg:-mt-40 bg-gray-500"
-      />
+     
     </section>
   );
 };
