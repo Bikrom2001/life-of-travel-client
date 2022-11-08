@@ -1,15 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaStar } from "react-icons/fa";
+import { PhotoProvider,PhotoView } from 'react-photo-view';
+import 'react-photo-view/dist/react-photo-view.css';
 
 const ServicesCart = ({ servic }) => {
 
-    const {title, img,price, review, _id} = servic;
+    const { title, img, price, review, _id } = servic;
 
     return (
         <div>
             <div className=" mx-auto group hover:no-underline focus:no-underline dark:bg-gray-900">
-                <img role="presentation" alt='' className="object-cover w-full rounded h-44 dark:bg-gray-500" src={img} />
+                <PhotoProvider speed={() => 800}
+                    easing={(type) => (type === 2 ? 'cubic-bezier(0.36, 0, 0.66, -0.56)' : 'cubic-bezier(0.34, 1.56, 0.64, 1)')}>
+                    <PhotoView src={img}>
+                        <img role="presentation" alt='' className="object-cover w-full cursor-pointer rounded h-44 dark:bg-gray-500" src={img} />
+                    </PhotoView>
+                </PhotoProvider>
                 <div className="p-6 space-y-2">
                     <h3 className="text-2xl font-semibold group-hover:underline group-focus:underline">{title}</h3>
                     <div className="flex flex-wrap justify-between pt-3 space-x-2 text-xs dark:text-violet-400">
