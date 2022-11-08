@@ -4,7 +4,7 @@ import { FaStar } from "react-icons/fa";
 
 const ServicesCart = ({ servic }) => {
 
-    const { title, img, description, price, review } = servic;
+    const {title, img,price, review} = servic;
 
     return (
         <div>
