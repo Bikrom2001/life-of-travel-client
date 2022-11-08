@@ -1,0 +1,50 @@
+[
+    {
+        "service_id": "01",
+        "title": "City Tours in Europe, Paris",
+        "img": "https://images.pexels.com/photos/8430474/pexels-photo-8430474.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "price": "20.00",
+        "review": "4.3",
+        "description": "Make sightseeing in the French capital easy with a Big Bus tour of Paris. Enjoy the convenience of hop-on hop-off access at any stop along the route, and soak in the views from an open-top, double-decker bus. See sights like the Louvre Museum, Moulin Rouge cabaret club, and the iconic Eiffel Tower as you listen to the informative audio commentary, available in 11 languages.Taking a hop-on hop-off bus tour around Paris gives you access to all the main attractions, an overview of the city, and a means of getting around all in one convenient package. With an open-top, double-decker Big Bus, you get the added bonus of an excellent vantage point for panoramic views."
+    },
+    {
+        "service_id": "02",
+        "title": "Best of Canada Tours and Travel",
+        "img": "https://images.pexels.com/photos/1750754/pexels-photo-1750754.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "price": "20.00",
+        "review": "5.0",
+        "description": "Located in  Banff National Park, these glacier-fed lakes have a distinctive turquoise blue shade. The color is due to the refraction of light off of the rocks. Moraine Lake is only half the size of the nearby Lake Louise. There are hiking trails and lots of scenic overlooks to take in the beauty. The Fairmont Chateau by Lake Louise is the best hotel to stay at when visiting this area.The lake reaches its crest in mid to late June, and when it's full, the colors are the most prominent. For the best colors, come in July and August. There is a canoe doc in the summer and a skating rink on the frozen lake in the winter."
+    },
+    {
+        "service_id": "03",
+        "title": "Italy – 3 Days in Rome, Golden Gate",
+        "img": "https://images.pexels.com/photos/632522/pexels-photo-632522.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "price": "200.00",
+        "review": "4.0",
+        "description": "Looking forward to spending the perfect 3 days in Rome? Awesome! But, there’s so much to see and experience in the Eternal City that knowing where to start can be difficult during the limited timeframe of your visit. That’s where we come in. In our customized itinerary, we outline our opinionated list of what we consider to be the best things to do in Rome in three days. Ideal for both first-time and repeat visitors.If you’re traveling to Rome by air, you’ll either be flying to Leonardo da Vinci International Airport, popularly known as Fiumicino (FCO), or the smaller Giovanni Battista Pastine Airport, known as Ciampino (CIO)."
+    },
+    {
+        "service_id": "04",
+        "title": "Hop-On Hop-Off Bus Tour",
+        "img": "https://images.pexels.com/photos/2407070/pexels-photo-2407070.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "price": "150.00",
+        "review": "5.0",
+        "description": "Finding your way around Paris doesn't need to be challenging, thanks to this hop-on hop-off bus tour. You can have one, two, or three days of double-decker bus access, covering various routes with stops at most of Paris’s most important museums, attractions, and shopping areas. And with your ticket, get all sorts of freebies, including walking tours and onboard audio guides with narration in multiple languages."
+    },
+    {
+        "service_id": "05",
+        "title": "Mont Saint-Michel Guided Day Trip from Paris",
+        "img": "https://images.pexels.com/photos/2136719/pexels-photo-2136719.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "price": "30.00",
+        "review": "4.6",
+        "description": "Travel through scenic Normandy en route to the medieval Mont-St-Michel on a full-day trip from Paris. Discover the UNESCO World-Heritage-listed island and its iconic Gothic abbey, with a guide, and listen to fascinating history and legendary stories about the site. Enjoy ample time to explore the island, and admire views of the surrounding bay before traveling back to the French capital. Explore the UNESCO-listed Mont-St-Michel on a day trip from Paris—ideal for those short on time Brush up on your history with fascinating and informative commentary from your guide Marvel at panoramic views of the Normandy Coast and the wild Atlantic Ocean Round-trip transportation included as an added convenience"
+    },
+    {
+        "service_id": "06",
+        "title": "Private or share Boat Tour in Paris",
+        "img": "https://images.pexels.com/photos/2783619/pexels-photo-2783619.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "price": "20.00",
+        "review": "3.9",
+        "description": "Enjoy a tourist cruise and beautiful views of the Seine (Statue of Liberty, Eiffel Tower, Pont Alexandre 3, New Bridge, Notre Dame Cathedral, Paris Plage ...) Excellent as a surprise gift to celebrate a birthday or outing with friends. Admire the city of love and lights from the water on this Paris cruise. Embark down the Seine, one of the longest rivers in France, and take in Paris’ sights on the riverside, such as the iconic Eiffel Tower and Notre Dame. Hop on board the boat and get comfortable before taking off from Port Javel Bas. Feel free to bring snacks and drinks on board to enjoy your trip fully. Pets are also welcome. First, you’ll cruise in front of the Statue of Liberty monument, followed by the Eiffel Tower, the Alexander III Bridge, the Orsay Museum, and the Louvre. The boat will pass under the historic Pont Neuf, Europe's oldest stone bridge and the first bridge in Paris. Just beyond it, you will have a unique view of Notre Dame Cathedral and the Paris Plages, a famous artificial beach located along the Seine."
+    }
+]
