@@ -1,4 +1,5 @@
 import React, { useContext, useState } from 'react'
+import { FaUser } from 'react-icons/fa';
 import { Link } from 'react-router-dom'
 import { AuthContext } from '../../contexts/UserContext';
 
@@ -6,12 +7,12 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { user, logOut } = useContext(AuthContext);
 
-  // const handleLogOut = () => {
-  //   logOut()
-  //     .then(() => {
-  //     })
-  //     .catch(error => console.error(error))
-  // }
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {
+      })
+      .catch(error => console.error(error))
+  }
 
 
   return (
@@ -52,36 +53,71 @@ const Header = () => {
               Blog
             </Link>
           </li>
-          <li>
-            <Link
-              to='/reviews'
-              aria-label='reviews'
-              title='reviews'
-              className='font-medium tracking-wide uppercase text-white transition-colors duration-200 hover:text-deep-purple-accent-400'
-            >
-              <p> My Reviews </p>
-            </Link>
-          </li>
-          <li>
-            <Link
-              to='/addservice'
-              aria-label='addservice'
-              title='addservice'
-              className='font-medium tracking-wide uppercase text-white transition-colors duration-200 hover:text-deep-purple-accent-400'
-            >
-              <p> Add service </p>
-            </Link>
-          </li>
-          <li>
-            <Link
-              to='/Login'
-              aria-label='Login'
-              title='Login'
-              className='font-medium tracking-wide uppercase text-white transition-colors duration-200 hover:text-deep-purple-accent-400'
-            >
-              Login
-            </Link>
-          </li>
+
+          {
+            !user?.uid ?
+              <li>
+                <Link
+                  to='/login'
+                  aria-label='Login'
+                  title='Login'
+                  className='font-medium tracking-wide uppercase text-white transition-colors duration-200 hover:text-deep-purple-accent-400'
+                >
+                  Login
+                </Link>
+              </li>
+              :
+              <>
+                <li>
+                  <Link
+                    to='/reviews'
+                    aria-label='reviews'
+                    title='reviews'
+                    className='font-medium tracking-wide uppercase text-white transition-colors duration-200 hover:text-deep-purple-accent-400'
+                  >
+                    <p> My Reviews </p>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to='/addservice'
+                    aria-label='addservice'
+                    title='addservice'
+                    className='font-medium tracking-wide uppercase text-white transition-colors duration-200 hover:text-deep-purple-accent-400'
+                  >
+                    <p> Add service </p>
+                  </Link>
+                </li>
+
+                <li>
+                  <Link
+                    onClick={handleLogOut}
+                    aria-label='logout'
+                    title='logout'
+                    className='font-medium tracking-wide uppercase text-white transition-colors duration-200 hover:text-deep-purple-accent-400'
+                  >
+                    logout
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    aria-label='Profile'
+                    title='Profile'
+                    className='font-medium tracking-wide uppercase text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
+                  >
+                    {
+                      user?.photoURL ?
+                        <img src={user?.photoURL} alt="" className="self-center flex-shrink-0 w-10 h-10 border rounded-full md:justify-self-start dark:bg-gray-500 dark:border-gray-700" />
+                        :
+                        <FaUser className="self-center flex-shrink-0 w-10 h-10 border rounded-full md:justify-self-start dark:bg-gray-500 dark:border-gray-700"></FaUser>
+                    }
+                  </Link>
+                </li>
+
+              </>
+          }
+
+
         </ul>
         <div className='lg:hidden'>
           <button
@@ -153,36 +189,74 @@ const Header = () => {
                         Blog
                       </Link>
                     </li>
-                    <li>
-                      <Link
-                        to='/reviews'
-                        aria-label='reviews'
-                        title='reviews'
-                        className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
-                      >
-                        <p> My Reviews</p>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        to='/addservice'
-                        aria-label='addservice'
-                        title='addservice'
-                        className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
-                      >
-                        <p> Add Service</p>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        to='/Login'
-                        aria-label='Login'
-                        title='Login'
-                        className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
-                      >
-                        Login
-                      </Link>
-                    </li>
+
+
+
+                    {
+                      !user?.uid ?
+                        <li>
+                          <Link
+                            to='/login'
+                            aria-label='Login'
+                            title='Login'
+                            className='font-medium tracking-wide uppercase text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
+                          >
+                            Login
+                          </Link>
+                        </li>
+                        :
+                        <>
+
+                          <li>
+                            <Link
+                              to='/reviews'
+                              aria-label='reviews'
+                              title='reviews'
+                              className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
+                            >
+                              <p> My Reviews</p>
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              to='/addservice'
+                              aria-label='addservice'
+                              title='addservice'
+                              className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
+                            >
+                              <p> Add Service</p>
+                            </Link>
+                          </li>
+
+                          <li>
+                            <Link
+                              onClick={handleLogOut}
+                              aria-label='logout'
+                              title='logout'
+                              className='font-medium tracking-wide uppercase text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
+                            >
+                              logout
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              aria-label='Profile'
+                              title='Profile'
+                              className='font-medium tracking-wide uppercase text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
+                            >
+                              {
+                                user?.photoURL ?
+                                  <img src={user?.photoURL} alt="" className="self-center flex-shrink-0 w-10 h-10 border rounded-full md:justify-self-start dark:bg-gray-500 dark:border-gray-700" />
+                                  :
+                                  <FaUser className="self-center flex-shrink-0 w-10 h-10 border rounded-full md:justify-self-start dark:bg-gray-500 dark:border-gray-700"></FaUser>
+                              }
+                            </Link>
+                          </li>
+
+                        </>
+                    }
+
+
                   </ul>
                 </nav>
               </div>
