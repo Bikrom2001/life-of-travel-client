@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { Link} from 'react-router-dom';
+import { Link, useLocation, useNavigate} from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { AuthContext } from '../../contexts/UserContext';
 
@@ -8,10 +8,10 @@ const Login = () => {
 
     const {signIn, signInWithGoogle, signInWithGithHub} = useContext(AuthContext);
     const [error, setError] = useState('');
-    // const navigate = useNavigate()
-    // const locaton = useLocation();
+    const navigate = useNavigate();
+    const locaton = useLocation();
 
-    // const from = locaton.state?.from?.pathname || '/';
+    const from = locaton.state?.from?.pathname || '/';
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -26,7 +26,7 @@ const Login = () => {
             form.reset();
             setError('');
             toast.success('Login Success !',{autoClose: 1000});
-            // navigate(from,{replace: true});
+            navigate(from,{replace: true});
             
         })
         .catch(error => {
@@ -45,7 +45,7 @@ const Login = () => {
                 const user = result.user;
                 console.log(user);
                 toast.success('Create an account Success !', { autoClose: 1000 });
-                // navigate(from,{replace: true});
+                navigate(from,{replace: true});
             })
             .catch(error => console.error(error))
     }
