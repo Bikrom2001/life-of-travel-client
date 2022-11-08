@@ -189,8 +189,8 @@ const Header = () => {
                         Blog
                       </Link>
                     </li>
-
-
+                  
+                  
 
                     {
                       !user?.uid ?
@@ -207,26 +207,26 @@ const Header = () => {
                         :
                         <>
 
-                          <li>
-                            <Link
-                              to='/reviews'
-                              aria-label='reviews'
-                              title='reviews'
-                              className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
-                            >
-                              <p> My Reviews</p>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              to='/addservice'
-                              aria-label='addservice'
-                              title='addservice'
-                              className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
-                            >
-                              <p> Add Service</p>
-                            </Link>
-                          </li>
+                            <li>
+                      <Link
+                        to='/reviews'
+                        aria-label='reviews'
+                        title='reviews'
+                        className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
+                      >
+                        <p> My Reviews</p>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to='/addservice'
+                        aria-label='addservice'
+                        title='addservice'
+                        className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
+                      >
+                        <p> Add Service</p>
+                      </Link>
+                    </li>
 
                           <li>
                             <Link
