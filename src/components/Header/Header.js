@@ -1,8 +1,19 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { AuthContext } from '../../contexts/UserContext';
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { user, logOut } = useContext(AuthContext);
+
+  // const handleLogOut = () => {
+  //   logOut()
+  //     .then(() => {
+  //     })
+  //     .catch(error => console.error(error))
+  // }
+
+
   return (
     <div className='px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8'>
       <div className='relative flex items-center justify-between'>
@@ -26,39 +37,49 @@ const Header = () => {
               to='/home'
               aria-label='Home'
               title='Home'
-              className='font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400'
+              className='font-medium tracking-wide uppercase text-white transition-colors duration-200 hover:text-deep-purple-accent-400'
             >
               Home
             </Link>
           </li>
           <li>
             <Link
-              to='/shop'
-              aria-label='Shop'
-              title='Shop'
-              className='font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400'
+              to='/Blog'
+              aria-label='Blog'
+              title='Blog'
+              className='font-medium tracking-wide uppercase text-white transition-colors duration-200 hover:text-deep-purple-accent-400'
             >
-              Shop
+              Blog
             </Link>
           </li>
           <li>
             <Link
-              to='/cart'
-              aria-label='Cart'
-              title='Cart'
-              className='font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400'
+              to='/reviews'
+              aria-label='reviews'
+              title='reviews'
+              className='font-medium tracking-wide uppercase text-white transition-colors duration-200 hover:text-deep-purple-accent-400'
             >
-              <p> Cart</p>
+              <p> My Reviews </p>
             </Link>
           </li>
           <li>
             <Link
-              to='/about'
-              aria-label='About Us'
-              title='About Us'
-              className='font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400'
+              to='/addservice'
+              aria-label='addservice'
+              title='addservice'
+              className='font-medium tracking-wide uppercase text-white transition-colors duration-200 hover:text-deep-purple-accent-400'
             >
-              About Us
+              <p> Add service </p>
+            </Link>
+          </li>
+          <li>
+            <Link
+              to='/Login'
+              aria-label='Login'
+              title='Login'
+              className='font-medium tracking-wide uppercase text-white transition-colors duration-200 hover:text-deep-purple-accent-400'
+            >
+              Login
             </Link>
           </li>
         </ul>
@@ -124,32 +145,42 @@ const Header = () => {
                   <ul className='space-y-4'>
                     <li>
                       <Link
-                        to='/shop'
-                        aria-label='Shop'
-                        title='Shop'
+                        to='/Blog'
+                        aria-label='Blog'
+                        title='Blog'
                         className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
                       >
-                        Shop
+                        Blog
                       </Link>
                     </li>
                     <li>
                       <Link
-                        to='/cart'
-                        aria-label='Cart'
-                        title='Cart'
+                        to='/reviews'
+                        aria-label='reviews'
+                        title='reviews'
                         className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
                       >
-                        <p> Cart</p>
+                        <p> My Reviews</p>
                       </Link>
                     </li>
                     <li>
                       <Link
-                        to='/about'
-                        aria-label='About Us'
-                        title='About Us'
+                        to='/addservice'
+                        aria-label='addservice'
+                        title='addservice'
                         className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
                       >
-                        About Us
+                        <p> Add Service</p>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to='/Login'
+                        aria-label='Login'
+                        title='Login'
+                        className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
+                      >
+                        Login
                       </Link>
                     </li>
                   </ul>
