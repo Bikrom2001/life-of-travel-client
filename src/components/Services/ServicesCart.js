@@ -23,7 +23,7 @@ const ServicesCart = ({ servic }) => {
                         <span>Price: ${price}</span>
                         <span className='flex items-center gap-1'><span>{review}</span> <FaStar></FaStar></span>
                     </div>
-                    <p>{servic?.description?.length > 200 ?
+                    <p>{servic?.description?.length > 10 ?
                         servic?.description?.slice(0, 100) + '...' : <p>not found</p>
                     }</p>
                     <Link className="inline-flex items-center  space-x-2 text-sm dark:text-violet-400" to={`/servicedetails/${_id}`}>
