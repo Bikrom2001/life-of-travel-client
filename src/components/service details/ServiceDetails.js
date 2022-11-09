@@ -33,7 +33,7 @@ const ServiceDetails = () => {
                         </div>
                     </div>
                 </div>
-                <ReviewSection></ReviewSection>
+                <ReviewSection service={service}></ReviewSection>
             </section>
 
         </div>
