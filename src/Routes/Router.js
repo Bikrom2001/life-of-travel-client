@@ -8,6 +8,7 @@ import Login from "../components/Login/Login";
 import MyReview from "../components/MyReview/MyReview";
 import Register from "../components/Register/Register";
 import ServiceDetails from "../components/service details/ServiceDetails";
+import UpdateReview from "../components/UpdateReview/UpdateReview";
 import Main from "../Layout/Main";
 import PrivateRoute from "./PrivateRoute";
 
@@ -53,6 +54,11 @@ const router = createBrowserRouter([
             {
                 path: '/addservice',
                 element: <PrivateRoute><AddServices></AddServices></PrivateRoute>
+            },
+            {
+                path: '/updatereview/:id',
+                element: <UpdateReview></UpdateReview>,
+                
             }
 
         ]

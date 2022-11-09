@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import { AuthContext } from '../../contexts/UserContext';
 import ReviewTable from '../ReviewTable/ReviewTable';
 
@@ -7,7 +8,6 @@ const MyReview = () => {
     const { user } = useContext(AuthContext);
 
     const [reviews, setreviews] = useState([]);
-    console.log(reviews);
 
     useEffect(() => {
         fetch(`http://localhost:5000/reviews?email=${user?.email}`)
@@ -16,6 +16,22 @@ const MyReview = () => {
                 setreviews(data);
             })
     }, [user?.email])
+
+
+    const handleDelete = (id) => {
+        fetch(`http://localhost:5000/reviews/${id}`,{
+            method: 'DELETE'
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            if(data.deletedCount > 0){
+                toast.success('successfully Delete !',{autoClose: 1500});
+                const remaining = reviews.filter(rev => rev._id !== id);
+                setreviews(remaining);
+            }
+        })
+    }
 
 
     return (
@@ -35,7 +51,7 @@ const MyReview = () => {
                             </thead>
                             <tbody>
                                 {
-                                    reviews.map(review => <ReviewTable key={review._id} review={review}></ReviewTable>)
+                                    reviews.map(review => <ReviewTable key={review._id} review={review} handleDelete={handleDelete}></ReviewTable>)
                                 }
                             </tbody>
                         </table>
