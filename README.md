@@ -1,3 +1,41 @@
+# Life of IDoctor -service-website-apps
+Life of IDoctor -service-website-apps
+
+## Live Link
+Hosted in Firebase -> [Life of IDoctor -service-website-apps-client]()
+
+## Live server Link
+Hosted in vercel -> [Life of IDoctor -service-website-apps-servers](https://life-of-travel-server-three.vercel.app/)
+
+## Our Courses - Steps to rewarding IT Career
+Your Health is Our Top Priority with Comprehensive, Affordable medical.!
+
+## Description For Website 
+1. Life of IDoctor -service-website-apps
+2. This website has a create blog page and 4 Frequently Asked Questions.
+3. Data is loaded dynamically from server and that data is shown in other components
+4. This website is powered by Taster and Sources data from a react-photo-views package.
+5. Login and user created and your profile on firebase
+6. This website uses Firebase authentication and verfiy user tokens
+7. user services add and single service reviews add website 
+
+## React Router Dom v6.4 
+Documentation Link -> [Link](https://reactrouter.com/en/main/start/overview)
+
+## Resources & Credits
+Tailwind Components -> 
+[Mamba UI](https://www.mambaui.com/)
+[Kitwind](https://daisyui.com/)
+
+## Other Resources
+Icon -> [react icons](https://react-icons.github.io/react-icons/)
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
