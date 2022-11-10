@@ -60,7 +60,7 @@ const ReviewSection = ({service}) => {
             </div>
 
 
-           <ShowReview></ShowReview>
+           <ShowReview service={service}></ShowReview>
 
 
 
