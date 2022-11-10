@@ -14,7 +14,7 @@ const Footer = () => {
                             </svg>
                         </div>
                         <span className="self-center text-2xl font-semibold text-white">
-                            Life of Travel
+                            Life of IDoctor
                         </span>
                     </Link>
                 </div>
@@ -110,7 +110,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="py-6 text-sm text-center text-gray-400">
-                © 2022 Life of Travel Inc. All rights reserved.
+                © 2022 Life of IDoctor Inc. All rights reserved.
             </div>
         </footer>
     );

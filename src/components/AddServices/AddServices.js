@@ -27,15 +27,15 @@ const AddServices = () => {
             },
             body: JSON.stringify(addServices)
         })
-        .then(res => res.json())
-        .then(data => {
-            console.log(data);
-            if(data.acknowledged){
-                toast.success('successfully create services !',{autoClose: 1500});
-                form.reset();
-            }
-        })
-        .catch(error => console.error(error))
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.acknowledged) {
+                    toast.success('successfully create services !', { autoClose: 1500 });
+                    form.reset();
+                }
+            })
+            .catch(error => console.error(error))
 
         // console.log(addServices);
     }
@@ -43,6 +43,13 @@ const AddServices = () => {
 
     return (
         <section className="p-6 dark:bg-gray-800 dark:text-gray-50">
+
+            <div className="space-y-2 text-center pt-6 pb-10">
+                <h2 className="text-3xl font-bold">Add Services </h2>
+                <p className="font-serif text-sm dark:text-gray-400">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+            </div>
+
+
             <form onSubmit={handleSubmit} className="container flex flex-col mx-auto space-y-12 ng-untouched ng-pristine ng-valid">
                 <fieldset className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm dark:bg-gray-900">
                     <div className="space-y-2 col-span-full lg:col-span-1">

@@ -20,8 +20,8 @@ const Header = () => {
       <div className='relative flex items-center justify-between'>
         <Link
           to='/'
-          aria-label='Life of Travel'
-          title='Life of Travel'
+          aria-label='Life of IDoctor'
+          title='Life of IDoctor'
           className='inline-flex items-center'
         >
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" className="w-8 h-8">
@@ -29,7 +29,7 @@ const Header = () => {
             <path d="M122.669,51.492,96.133,124.4,30.092,97.205,17.908,126.8l67.271,27.7L26.9,314.606a48.056,48.056,0,0,0,28.689,61.523l184.719,67.232a48,48,0,0,0,61.523-28.688L397.6,151.56Zm149.1,352.236a16,16,0,0,1-20.508,9.563L66.537,346.059a16,16,0,0,1-9.563-20.507L73.553,280H316.8ZM85.2,248l29.594-81.311,36.333,14.961a32.644,32.644,0,1,0,11.236-29.98l-36.615-15.077,16.046-44.085,214.79,78.177L328,249.219V248Z"></path>
           </svg>
           <span className='ml-2 text-xl font-bold tracking-wide text-white uppercase'>
-            Life of Travel
+            Life of IDoctor
           </span>
         </Link>
         <ul className='flex items-center hidden space-x-8 lg:flex'>
@@ -157,7 +157,7 @@ const Header = () => {
                         <path d="M122.669,51.492,96.133,124.4,30.092,97.205,17.908,126.8l67.271,27.7L26.9,314.606a48.056,48.056,0,0,0,28.689,61.523l184.719,67.232a48,48,0,0,0,61.523-28.688L397.6,151.56Zm149.1,352.236a16,16,0,0,1-20.508,9.563L66.537,346.059a16,16,0,0,1-9.563-20.507L73.553,280H316.8ZM85.2,248l29.594-81.311,36.333,14.961a32.644,32.644,0,1,0,11.236-29.98l-36.615-15.077,16.046-44.085,214.79,78.177L328,249.219V248Z"></path>
                       </svg>
                       <span className='ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase'>
-                        Life of Travel
+                        Life of IDoctor
                       </span>
                     </Link>
                   </div>

@@ -11,8 +11,8 @@ const ServiceDetails = () => {
         <div>
             <section className="dark:bg-gray-800 dark:text-gray-100">
                 <div className="space-y-2 text-center pt-6">
-                    <h2 className="text-3xl font-bold">Partem reprimique an pro</h2>
-                    <p className="font-serif text-sm dark:text-gray-400">Qualisque erroribus usu at, duo te agam soluta mucius.</p>
+                    <h2 className="text-3xl font-bold">Our Service Details</h2>
+                    <p className="font-serif text-sm dark:text-gray-400">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
                 </div>
                 <div className="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12">
                     <div className="block max-w-sm gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 dark:bg-gray-900">
