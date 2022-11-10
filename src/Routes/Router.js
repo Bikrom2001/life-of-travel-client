@@ -33,18 +33,18 @@ const router = createBrowserRouter([
             {
                 path: '/servicedetails/:id',
                 element: <ServiceDetails></ServiceDetails>,
-                loader: ({params}) => fetch(`http://localhost:5000/services/${params.id}`)
+                loader: ({ params }) => fetch(`https://life-of-travel-server-three.vercel.app/services/${params.id}`)
             },
             {
                 path: '/Login',
-                element:<Login></Login>
+                element: <Login></Login>
             },
             {
                 path: '/register',
                 element: <Register></Register>
             },
             {
-                path:'/Blog',
+                path: '/Blog',
                 element: <Blog></Blog>
             },
             {
@@ -58,7 +58,7 @@ const router = createBrowserRouter([
             {
                 path: '/updatereview/:id',
                 element: <UpdateReview></UpdateReview>,
-                loader: ({params}) => fetch(`http://localhost:5000/reviews/${params.id}`)
+                loader: ({ params }) => fetch(`https://life-of-travel-server-three.vercel.app/reviews/${params.id}`)
             }
 
         ]
@@ -66,4 +66,4 @@ const router = createBrowserRouter([
 ])
 
 
-export default router ;
+export default router;

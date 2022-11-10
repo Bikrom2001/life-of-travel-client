@@ -11,7 +11,7 @@ const UpdateReview = () => {
     const handleAddSubmit = (event) => {
         event.preventDefault();
         // console.log(user);
-        fetch(`http://localhost:5000/reviews/${review._id}`, {
+        fetch(`https://life-of-travel-server-three.vercel.app/reviews/${review._id}`, {
             method: "PUT",
             headers: {
                 'content-type': 'application/json'
@@ -22,7 +22,7 @@ const UpdateReview = () => {
             .then(data => {
                 console.log(data);
                 if (data.modifiedCount > 0) {
-                    toast.success('Successfully Update User',{autoClose: 1500});
+                    toast.success('Successfully Update User', { autoClose: 1500 });
                 }
             })
 

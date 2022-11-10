@@ -3,8 +3,11 @@ import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { setAuthToken } from '../../Api/Auth';
 import { AuthContext } from '../../contexts/UserContext';
+import UserTitle from '../UserTitle/UserTitle';
 
 const Register = () => {
+
+    UserTitle('Register-pages');
 
     const { createUser, updateUserProfile , signInWithGoogle} = useContext(AuthContext);
     const [error, setError] = useState('');

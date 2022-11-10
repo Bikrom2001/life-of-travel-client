@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import ServicesCart from '../Services/ServicesCart';
+import UserTitle from '../UserTitle/UserTitle';
 
 const AllServices = () => {
+
+    UserTitle('All-Services');
 
     const [allService, setAllservice] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/allservices')
+        fetch('https://life-of-travel-server-three.vercel.app/allservices')
             .then(res => res.json())
             .then(data => setAllservice(data))
     }, [])

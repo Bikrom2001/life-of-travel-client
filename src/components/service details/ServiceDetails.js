@@ -4,8 +4,11 @@ import { PhotoProvider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
 import { useLoaderData } from 'react-router-dom';
 import ReviewSection from '../ReviewSection/ReviewSection';
+import UserTitle from '../UserTitle/UserTitle';
 
 const ServiceDetails = () => {
+
+    UserTitle('Service-Details');
     const service = useLoaderData();
     return (
         <div>

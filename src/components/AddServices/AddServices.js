@@ -1,7 +1,10 @@
 import React from 'react';
 import { toast } from 'react-toastify';
+import UserTitle from '../UserTitle/UserTitle';
 
 const AddServices = () => {
+
+    UserTitle('Add Our Services');
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -20,7 +23,7 @@ const AddServices = () => {
             description: description
         }
 
-        fetch('http://localhost:5000/services', {
+        fetch('https://life-of-travel-server-three.vercel.app/services', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

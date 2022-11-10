@@ -3,14 +3,18 @@ import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { AuthContext } from '../../contexts/UserContext';
 import ReviewTable from '../ReviewTable/ReviewTable';
+import UserTitle from '../UserTitle/UserTitle';
 
 const MyReview = () => {
+
+    UserTitle('My-Review');
+
     const { user } = useContext(AuthContext);
 
     const [reviews, setreviews] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/reviews?email=${user?.email}`, {
+        fetch(`https://life-of-travel-server-three.vercel.app/reviews?email=${user?.email}`, {
             headers: {
                 authorization: `Bearer ${localStorage.getItem('doctor-token')}`
             }
@@ -23,7 +27,7 @@ const MyReview = () => {
 
 
     const handleDelete = (id) => {
-        fetch(`http://localhost:5000/reviews/${id}`, {
+        fetch(`https://life-of-travel-server-three.vercel.app/reviews/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

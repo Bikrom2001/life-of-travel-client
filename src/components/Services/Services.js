@@ -7,7 +7,7 @@ const Services = () => {
     const [service, setService] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://life-of-travel-server-three.vercel.app/services')
             .then(res => res.json())
             .then(data => setService(data))
     }, [])
@@ -28,7 +28,7 @@ const Services = () => {
 
                 </div>
                 <div className="flex justify-center">
-                   <Link to='/allservices'> <button type="button" className="px-6 py-3 text-sm rounded-md hover:underline dark:bg-gray-900 dark:text-gray-400">Load more services</button></Link>
+                    <Link to='/allservices'> <button type="button" className="px-6 py-3 text-sm rounded-md hover:underline dark:bg-gray-900 dark:text-gray-400">Load more services</button></Link>
                 </div>
             </div>
         </section>

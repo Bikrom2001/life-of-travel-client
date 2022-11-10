@@ -2,11 +2,14 @@ import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { AuthContext } from '../../contexts/UserContext';
+import UserTitle from '../UserTitle/UserTitle';
 
 
 const Login = () => {
 
-    const { signIn, signInWithGoogle} = useContext(AuthContext);
+    UserTitle('login-page')
+
+    const { signIn, signInWithGoogle } = useContext(AuthContext);
     const [error, setError] = useState('');
     const navigate = useNavigate();
     const locaton = useLocation();
@@ -28,7 +31,7 @@ const Login = () => {
                 console.log(currentUser);
 
                 // get jwt token
-                fetch('http://localhost:5000/jwt', {
+                fetch('https://life-of-travel-server-three.vercel.app/jwt', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'
@@ -70,8 +73,8 @@ const Login = () => {
                     email: user.email
                 }
 
-                  // get jwt token
-                  fetch('http://localhost:5000/jwt', {
+                // get jwt token
+                fetch('https://life-of-travel-server-three.vercel.app/jwt', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'
@@ -83,7 +86,7 @@ const Login = () => {
                         console.log(data);
                         // local storage 
                         localStorage.setItem('doctor-token', data.token);
-                        
+
                         toast.success('Login Success !', { autoClose: 1000 });
                         navigate(from, { replace: true });
                     })
@@ -132,7 +135,7 @@ const Login = () => {
                         <p>Login with Google</p>
                     </button>
 
-                  
+
                 </div>
 
             </div>

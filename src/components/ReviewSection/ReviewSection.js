@@ -1,15 +1,15 @@
-import React, { useContext,} from 'react';
+import React, { useContext, } from 'react';
 import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { AuthContext } from '../../contexts/UserContext';
 import ShowReview from './ShowReview';
 
-const ReviewSection = ({service}) => {
+const ReviewSection = ({ service }) => {
 
 
     const { user } = useContext(AuthContext);
 
-   
+
     const handlesubmit = (event) => {
         event.preventDefault();
         const form = event.target;
@@ -28,23 +28,23 @@ const ReviewSection = ({service}) => {
             photoURL: photoURL,
             description: description
         }
-        
-        fetch('http://localhost:5000/reviews',{
+
+        fetch('https://life-of-travel-server-three.vercel.app/reviews', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
             },
             body: JSON.stringify(addReview)
         })
-        .then(res => res.json())
-        .then(data => {
-            console.log(data);
-            if(data.acknowledged){
-                form.reset();
-                toast.success('successfully create review !',{autoClose: 1500});
-            }
-        })
-        .catch(error => console.error(error));
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.acknowledged) {
+                    form.reset();
+                    toast.success('successfully create review !', { autoClose: 1500 });
+                }
+            })
+            .catch(error => console.error(error));
     }
 
 
@@ -60,7 +60,7 @@ const ReviewSection = ({service}) => {
             </div>
 
 
-           <ShowReview service={service}></ShowReview>
+            <ShowReview service={service}></ShowReview>
 
 
 
@@ -76,7 +76,7 @@ const ReviewSection = ({service}) => {
                                 <div className="grid grid-cols-6 gap-4 col-span-full lg:col-span-3">
                                     <div className="col-span-full sm:col-span-3">
                                         <label htmlFor="firstname" className="text-sm">First name</label>
-                                        <input  name='firstname' id="firstname" type="text" placeholder="First name" className="w-full rounded-md focus:ring p-3 focus:ring-opacity-75 focus:ring-violet-400 dark:border-gray-700 dark:text-white" required />
+                                        <input name='firstname' id="firstname" type="text" placeholder="First name" className="w-full rounded-md focus:ring p-3 focus:ring-opacity-75 focus:ring-violet-400 dark:border-gray-700 dark:text-white" required />
                                     </div>
                                     <div className="col-span-full sm:col-span-3">
                                         <label htmlFor="lastname" className="text-sm">Last Name</label>
